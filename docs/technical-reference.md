@@ -11,6 +11,8 @@ The standalone Python project contains an offline inference implementation, eval
 
 ## Artifact map
 
+This inventory spans retained private materials and public artifacts. The original application source and decision documents remain private; the Hugging Face notebooks are edited public derivatives, not the full application.
+
 | Artifact class | What it contributes | What it does not establish |
 | --- | --- | --- |
 | Inference source | A reviewable offline implementation | A running service or live phone application |
@@ -54,6 +56,8 @@ Published 22 October 2026 on [Hugging Face](https://huggingface.co/Seemorgh/yolo
 - [Notebook review and sanitization notes](https://huggingface.co/Seemorgh/yolo11n-aod4-v6/blob/692377dc55f682cbe5fe17fc5944514574ca9b08/NOTEBOOK_REVIEW.md), including method limitations and publication edits.
 
 The notebook links pin the reviewed release revision. Publication-file checksums identify the released bytes; they do not supply the missing original cloud-to-local transfer receipt or independently authenticate the old training run. No new training, inference, conversion or evaluation was performed for publication. Exact checkpoint-to-Core-ML equivalence and successful device inference remain unverified.
+
+The public evaluation draft uses non-overlapping grids and does not reproduce the overlapping-crop field workflow described in the overview. Its image-level counts must not be presented as a reproduction of the retained field observations.
 
 The evaluation draft implements two exploratory steps despite its original three-step title. It counts aerial predictions without matching boxes to ground truth; bird predictions are class counts, not measured false positives. Increased prediction frequency does not validate tiling, recall, a detection floor or physical range. Neither notebook establishes field reliability or on-device performance.
 
