@@ -19,6 +19,7 @@ The standalone Python project contains an offline inference implementation, eval
 | Capture still | Actual appearance of an input scene | A detection, a correct selection or model quality |
 | Two annotated output images | Original retained evaluation markers, including competing candidates | Autonomous identification or a new inference result |
 | Recovered checkpoint | Bytes matching a retained model-reference digest | Training quality, fresh acceptance or a distributable model |
+| Recovered training record | Stored 50-epoch history matching the notebook within rounding; historical aggregate validation metrics | Independent reproduction, drone-only accuracy or proven transfer provenance |
 | Decision documents | Implementation choices and unresolved limitations | Independent validation of those choices |
 
 ## Read the result correctly
@@ -36,6 +37,8 @@ The useful finding is that surfacing a plausible candidate and choosing the inte
 | Checkpoint identity | One recovered checkpoint | Digest matches a retained reference | Artifact identity, not training quality or fresh inference acceptance |
 
 ## Reproduction prerequisites
+
+See the [sanitized training report](training-report.md) for the four-class validation table, separate checkpoint/notebook metric origins, dataset attribution and observed model license. The dataset's CC BY 4.0 declaration does not replace the checkpoint's AGPL-3.0 notice or certify redistribution compliance.
 
 The source repository and model weights remain private. An archive inspection located a saved checkpoint whose SHA-256 matches a retained model-reference record. This establishes an artifact identity link, not a fresh model run. Inputs and third-party datasets have separate distribution considerations. A visitor cannot reproduce the reported result merely by copying a command from this page.
 

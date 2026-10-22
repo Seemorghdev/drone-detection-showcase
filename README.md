@@ -7,6 +7,7 @@ This repository contains the screened documentary account and original retained 
 ## Inspect the work
 
 - [Technical reference](docs/technical-reference.md)
+- [Recovered training report and recorded validation results](docs/training-report.md)
 - [Retained observations and limits](docs/observations.md)
 - [Visual provenance](docs/visuals.md)
 - [Portfolio account](https://mehridian.tech/projects/small-object-detection)
@@ -18,6 +19,12 @@ This repository contains the screened documentary account and original retained 
 | Checkpoint identity | One recovered file | Digest matches a retained reference | Artifact identity, not training quality or fresh inference |
 
 No new experiment was run to create this repository. These are retained observations, not a newly reproduced benchmark.
+
+## Recovered training record
+
+The retained Modal notebook reports **mAP50 0.96518** and **mAP50–95 0.66663** on **4,514 validation images**, aggregated across airplane, bird, drone and helicopter classes. These are recorded validation metrics, not drone-only accuracy or field reliability.
+
+All 200 stored metric-history values in the recovered checkpoint agree with the notebook's 50 training epochs within printed rounding precision. This strongly supports the same-run origin, but an original byte-for-byte transfer receipt was not located. The [sanitized training report](docs/training-report.md) keeps the checkpoint's stored metrics separate from the notebook's slightly different subsequent validation scores and documents the dataset's CC BY 4.0 declaration and checkpoint's AGPL-3.0 notice. No new evaluation or model release is implied.
 
 ## Original retained output A
 
