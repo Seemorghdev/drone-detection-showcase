@@ -83,6 +83,21 @@ The previously documented selected-frame observations and manually referenced ca
 
 ## Sanitization and availability
 
-The source notebook contains a hard-coded credential-like value. It is intentionally excluded, along with source code, raw logs, cloud identifiers, internal evidence links, and device-specific paths. The credential was not tested; this report does not establish that it has been revoked.
+The source notebook contains a hard-coded credential-like value. The original notebook is excluded from this report; the separate published training notebook replaces the credential with an environment-variable reference and removes raw outputs, cloud identifiers, internal evidence links and device-specific paths. The credential was not tested; this report does not establish that it has been revoked.
 
-This report is a sanitized documentary artifact for review. It is not a downloadable model release, a redistribution clearance, or a claim that a Hugging Face upload has occurred.
+This report remains a sanitized documentary account and is not redistribution clearance. The recovered checkpoint and reviewed notebook derivatives have since been published separately, as linked below. Publication does not change the historical provenance or evaluation findings.
+
+## Public model and reviewed notebooks
+
+Published 22 October 2026 on [Hugging Face](https://huggingface.co/Seemorgh/yolo11n-aod4-v6):
+
+- [Recovered YOLO11n checkpoint and model card](https://huggingface.co/Seemorgh/yolo11n-aod4-v6); [release files](https://huggingface.co/Seemorgh/yolo11n-aod4-v6/tree/692377dc55f682cbe5fe17fc5944514574ca9b08).
+- [Sanitized training and Core ML export notebook](https://huggingface.co/Seemorgh/yolo11n-aod4-v6/blob/692377dc55f682cbe5fe17fc5944514574ca9b08/notebooks/01_train_export.ipynb): edited code with a labeled historical-results summary; original raw outputs and the credential literal are excluded.
+- [Exploratory evaluation notebook](https://huggingface.co/Seemorgh/yolo11n-aod4-v6/blob/692377dc55f682cbe5fe17fc5944514574ca9b08/notebooks/02_eval_tiling_range.ipynb): an **unexecuted draft in the retained record**, with unsupported validation claims corrected.
+- [Notebook review and sanitization notes](https://huggingface.co/Seemorgh/yolo11n-aod4-v6/blob/692377dc55f682cbe5fe17fc5944514574ca9b08/NOTEBOOK_REVIEW.md), including method limitations and publication edits.
+
+The notebook links pin the reviewed release revision. Publication-file checksums identify the released bytes; they do not supply the missing original cloud-to-local transfer receipt or independently authenticate the old training run. No new training, inference, conversion or evaluation was performed for publication. Exact checkpoint-to-Core-ML equivalence and successful device inference remain unverified.
+
+The evaluation draft implements two exploratory steps despite its original three-step title. It counts aerial predictions without matching boxes to ground truth; bird predictions are class counts, not measured false positives. Increased prediction frequency does not validate tiling, recall, a detection floor or physical range. Neither notebook establishes field reliability or on-device performance.
+
+The model release preserves the checkpoint's AGPL-3.0 designation; dataset CC BY 4.0 attribution is separate. The links do not establish an Enterprise agreement, Apache-2.0 relicensing permission or redistribution compliance. The original application, unsanitized notebooks, raw media and operational components are not released here.

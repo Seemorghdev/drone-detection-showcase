@@ -18,7 +18,7 @@ The standalone Python project contains an offline inference implementation, eval
 | Retained field summaries | Selected, manually referenced candidate observations | Blind precision/recall or general accuracy |
 | Capture still | Actual appearance of an input scene | A detection, a correct selection or model quality |
 | Two annotated output images | Original retained evaluation markers, including competing candidates | Autonomous identification or a new inference result |
-| Recovered checkpoint | Bytes matching a retained model-reference digest | Training quality, fresh acceptance or a distributable model |
+| Recovered checkpoint | Bytes matching a retained model-reference digest | Training quality, fresh acceptance or redistribution clearance |
 | Recovered training record | Stored 50-epoch history matching the notebook within rounding; historical aggregate validation metrics | Independent reproduction, drone-only accuracy or proven transfer provenance |
 | Decision documents | Implementation choices and unresolved limitations | Independent validation of those choices |
 
@@ -40,14 +40,30 @@ The useful finding is that surfacing a plausible candidate and choosing the inte
 
 See the [sanitized training report](training-report.md) for the four-class validation table, separate checkpoint/notebook metric origins, dataset attribution and observed model license. The dataset's CC BY 4.0 declaration does not replace the checkpoint's AGPL-3.0 notice or certify redistribution compliance.
 
-The source repository and model weights remain private. An archive inspection located a saved checkpoint whose SHA-256 matches a retained model-reference record. This establishes an artifact identity link, not a fresh model run. Inputs and third-party datasets have separate distribution considerations. A visitor cannot reproduce the reported result merely by copying a command from this page.
+The original application source remains private. The recovered checkpoint and sanitized notebooks are now public through the separate Hugging Face release linked below. An archive inspection located a saved checkpoint whose SHA-256 matches a retained model-reference record. This establishes an artifact identity link, not a fresh model run. Inputs and third-party datasets have separate distribution considerations. A visitor cannot reproduce the reported result merely by copying a command from this page.
 
-A reproducible release would need a specifically reviewed source snapshot, permitted inputs, a permitted model artifact, environment information and a clear evaluation protocol. Those are missing public-release components, not something this website silently supplies. No weights or datasets are downloaded by the preview.
+The public checkpoint and edited notebooks provide inspectable artifacts, but do not establish a complete reproducible benchmark. The environment is not locked, dataset rights and split independence require separate review, and the exploratory evaluation lacks ground-truth matching. No weights or datasets are automatically downloaded by this showcase.
+
+## Public model and reviewed notebooks
+
+Published 22 October 2026 on [Hugging Face](https://huggingface.co/Seemorgh/yolo11n-aod4-v6):
+
+- [Recovered YOLO11n checkpoint and model card](https://huggingface.co/Seemorgh/yolo11n-aod4-v6); [release files](https://huggingface.co/Seemorgh/yolo11n-aod4-v6/tree/692377dc55f682cbe5fe17fc5944514574ca9b08).
+- [Sanitized training and Core ML export notebook](https://huggingface.co/Seemorgh/yolo11n-aod4-v6/blob/692377dc55f682cbe5fe17fc5944514574ca9b08/notebooks/01_train_export.ipynb): edited code with a labeled historical-results summary; original raw outputs and the credential literal are excluded.
+- [Exploratory evaluation notebook](https://huggingface.co/Seemorgh/yolo11n-aod4-v6/blob/692377dc55f682cbe5fe17fc5944514574ca9b08/notebooks/02_eval_tiling_range.ipynb): an **unexecuted draft in the retained record**, with unsupported validation claims corrected.
+- [Notebook review and sanitization notes](https://huggingface.co/Seemorgh/yolo11n-aod4-v6/blob/692377dc55f682cbe5fe17fc5944514574ca9b08/NOTEBOOK_REVIEW.md), including method limitations and publication edits.
+
+The notebook links pin the reviewed release revision. Publication-file checksums identify the released bytes; they do not supply the missing original cloud-to-local transfer receipt or independently authenticate the old training run. No new training, inference, conversion or evaluation was performed for publication. Exact checkpoint-to-Core-ML equivalence and successful device inference remain unverified.
+
+The evaluation draft implements two exploratory steps despite its original three-step title. It counts aerial predictions without matching boxes to ground truth; bird predictions are class counts, not measured false positives. Increased prediction frequency does not validate tiling, recall, a detection floor or physical range. Neither notebook establishes field reliability or on-device performance.
+
+The model release preserves the checkpoint's AGPL-3.0 designation; dataset CC BY 4.0 attribution is separate. The links do not establish an Enterprise agreement, Apache-2.0 relicensing permission or redistribution compliance. The original application, unsanitized notebooks, raw media and operational components are not released here.
 
 ## Current access
 
 - **Public implementation:** not released.
-- **Implementation and model weights:** retained privately; not distributed through this website.
+- **Original application implementation:** private.
+- **Recovered weights and sanitized notebooks:** public on Hugging Face, as linked above; the original unsanitized notebooks remain private.
 - **Hosted model endpoint:** none offered here.
 - **Visuals in the overview:** screened input still and two unmodified annotated evaluation outputs, available full-size; not a fresh runtime demonstration.
 - **Later monorepo:** separately inventoried, not treated as acceptance of an integrated system.
