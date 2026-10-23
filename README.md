@@ -8,6 +8,7 @@ This repository contains the screened documentary account and original retained 
 
 - [Technical reference](docs/technical-reference.md)
 - [Recovered training report and recorded validation results](docs/training-report.md)
+- [Saved evaluation summary](docs/recorded-evaluation-summary.md) and [structured counts](docs/recorded-evaluation-counts.json): historical prediction-presence counters, not accuracy, recall or a measured false-positive rate. The executed companion is distinct from the public evaluation draft; these counts do not reproduce the separate historical 7% → 22% table.
 - [Retained observations and limits](docs/observations.md)
 - [Visual provenance](docs/visuals.md)
 - [Portfolio account](https://mehridian.tech/projects/small-object-detection)
