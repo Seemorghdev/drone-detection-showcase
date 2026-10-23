@@ -1,0 +1,47 @@
+{
+  "record_type": "edited_historical_counts_not_benchmark",
+  "summary_date": "2026-10-23",
+  "new_experiment_performed": false,
+  "raw_execution_record_public": false,
+  "image_sample": {
+    "reported_split_images": 2625,
+    "selection": "first_500_entries_not_documented_random_sample",
+    "sampled_images": 500,
+    "grouping": "longest_side_of_largest_annotated_box",
+    "numerator": "images_with_any_aerial_group_prediction_without_box_matching",
+    "ground_truth_box_matching": false,
+    "ground_truth_class_filtering": false,
+    "buckets": [
+      {"label": "0-10 px", "prediction_presence_images": 1, "images": 6},
+      {"label": "10-20 px", "prediction_presence_images": 37, "images": 67},
+      {"label": "20-40 px", "prediction_presence_images": 88, "images": 120},
+      {"label": "40-80 px", "prediction_presence_images": 76, "images": 98},
+      {"label": "80-160 px", "prediction_presence_images": 44, "images": 68},
+      {"label": "160+ px", "prediction_presence_images": 86, "images": 141}
+    ],
+    "bird_class_predicted_boxes": 18,
+    "images_with_bird_predictions": null,
+    "validated_false_positives": null
+  },
+  "video_sample": {
+    "video_records": 1,
+    "selection": "first_located_video",
+    "stable_input_video_identity_established": false,
+    "execution_time_checkpoint_digest_recorded": false,
+    "ground_truth_matching": false,
+    "variants": [
+      {"label": "1x1", "frames_with_aerial_prediction": 109, "sampled_frames": 200, "bird_class_predicted_boxes": 0},
+      {"label": "3x3", "frames_with_aerial_prediction": 55, "sampled_frames": 200, "bird_class_predicted_boxes": 0},
+      {"label": "6x6", "frames_with_aerial_prediction": 0, "sampled_frames": 200, "bird_class_predicted_boxes": 6}
+    ],
+    "validated_precision": null,
+    "validated_recall": null,
+    "configuration_recommendation": null
+  },
+  "scope_limits": [
+    "Not an independent reproduction or clean-run authentication",
+    "Does not reproduce the separate historical 7 percent to 22 percent table",
+    "Do not pool with manually referenced field observations or training-validation metrics",
+    "No field reliability, physical range, autonomous identification or device performance claim"
+  ]
+}
