@@ -2,6 +2,32 @@
 
 **Public study artifacts · original evaluation outputs · one public rerun of the released model**
 
+A documentary record of the small-object detection study, its original evaluation outputs, the recovered training record, and one reproducible public rerun.
+
+**Status.** Built: a screened study record with retained images and separate training, evaluation, and rerun evidence. Evidence: a candidate appeared in 8 of 8 selected frames; a separate cue-selection check succeeded in 2 of 4 paired observations; the one-image rerun boxed the same object in both passes. Limits: these are different checks and denominators; the rerun is one image, neither pass identified a drone, and none of these results establishes field reliability.
+
+## Verify
+
+From the repository root, verify the ten listed files:
+
+```bash
+sha256sum -c SHA256SUMS.txt
+```
+
+On macOS, use `shasum -a 256 -c SHA256SUMS.txt`. Every listed file should report `OK`.
+
+## Tests
+
+The repository contains documentary artifacts, not an application test suite. The [checksums workflow](.github/workflows/checksums.yml) runs the same integrity check on pushes and pull requests.
+
+## How it fits
+
+This is the documentary study behind the [Small-object detection project](https://mehridian.tech/projects/small-object-detection). Its [technical reference](docs/technical-reference.md) records artifacts, results and reproduction limits.
+
+## Licence
+
+CC BY 4.0. See `LICENSE`. This does not grant a new licence for the original application, model weights or third-party material.
+
 A drone about 40 pixels wide in a 1080 × 1920 phone frame shrinks to about 13 pixels when the whole frame is resized for a detector. This study ran the detector over overlapping full-resolution crops instead. In eight selected field frames, that scan surfaced a candidate next to the manually marked drone in every one. Choosing the right candidate among several is the open problem.
 
 This repository holds the screened documentary account and the original evaluation images. The recovered checkpoint, sanitized notebooks and a rerunnable script are in the separate [Hugging Face release](https://huggingface.co/Seemorgh/yolo11n-aod4-v6). The original detector application stays private.
