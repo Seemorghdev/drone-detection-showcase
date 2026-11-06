@@ -1,0 +1,18 @@
+name: checksums
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Verify published-file checksums
+        run: sha256sum -c SHA256SUMS.txt
